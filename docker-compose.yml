@@ -1,0 +1,13 @@
+version: "3.1"
+
+services:
+  fastapi:
+    image:  mlops_image:latest
+    ports:
+        - "8650:8650"
+    command: bash -c "cd ServerApp && uvicorn server:app --host 0.0.0.0 --port 8650 --reload"
+  flask:
+    image:  mlops_image:latest
+    ports:
+        - "8651:8651"
+    command: flask --app UIApp.app run --host=0.0.0.0 --port 8651 --reload
