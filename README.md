@@ -6,9 +6,10 @@
 
 1. Extract the ML Ops Zip file 
 2. Start a terminal inside the ML Ops Folder
-3. Make changes in the `UIApp -> static -> server_mapping.js` file to update server_ip to the appropriate address
+3. Make changes in the `UIApp -> static -> server_mapping.js` file to update `server_ip` to the appropriate IP address
    depending upon where this image is to be built (for the local system update it to localhost)
-    server_mapping = {
+   ```
+   server_mapping = {
         "server_ip":"0.0.0.0", #your server IP
         "port": 8650
     }
